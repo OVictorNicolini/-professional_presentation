@@ -1,4 +1,5 @@
 .marginBottom8 {
+  /*se trata de um mixin*/
   margin-bottom: 8px;
 }
 * {
@@ -18,7 +19,6 @@ li {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +38,7 @@ li {
   }
 }
 header {
+  padding-top: 24px;
   padding-bottom: 24px;
 }
 header .profile-avatar {
@@ -46,6 +47,11 @@ header .profile-avatar {
   border-radius: 50%;
   /* 50% ou 100px para deixar a imagem redonda */
   max-width: 140px;
+  width: 100%;
+  height: auto;
+  /* Adicione esta linha para manter a proporção da imagem */
+  object-fit: cover;
+  /* Adicione esta linha para garantir que a imagem se ajuste ao contêiner */
 }
 .profile-bio {
   text-align: center;
@@ -53,11 +59,13 @@ header .profile-avatar {
 .profile-bio-name {
   /* &-name é o mesmo que .profile-bio-name */
   font-size: 16px;
+  /*se trata de um mixin*/
   margin-bottom: 8px;
   /* Chamando a classe .marginBottom8 */
 }
 .profile-bio-subtitle {
   font-size: 14px;
+  /*se trata de um mixin*/
   margin-bottom: 8px;
 }
 .profile-bio-description {
